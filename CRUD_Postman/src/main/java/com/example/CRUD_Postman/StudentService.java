@@ -24,8 +24,9 @@ public class StudentService {
     }
     
     public void deleteStudent(long id) {
+    	System.out.print((studentRepository.findById(id)).toString() + "sikeresen törölve");
     	studentRepository.deleteById(id);
-    	System.out.print(studentRepository.findById(id).toString() + "sikeresen törölve");
+    	
     }
     
     public Student getStudentById(long id) {
